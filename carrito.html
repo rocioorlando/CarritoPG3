@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm">
+                <h4 class="mb-3">Agregar Producto</h4>
+                <div class="mb-3">
+                    <label for="codigo" class="form-label">Código producto</label>
+                    <input type="text" id="codigo" class="form-control" placeholder="Ingrese el código del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre producto</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="cantidad" class="form-label">Cantidad</label>
+                    <input type="number" id="cantidad" class="form-control" placeholder="Ingrese la cantidad">
+                </div>
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="number" id="precio" class="form-control" placeholder="Ingrese el precio" step="0.01">
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button id="agregar" class="btn btn-primary">Agregar</button>
+                    <button id="limpiar" class="btn btn-secondary">Limpiar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <table id="carrito" class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Código</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Seleccionar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán las filas de productos -->
+                </tbody>
+            </table>
+            <button id="agregarAlCarrito" class="btn btn-primary mt-3">Agregar al Carrito</button>
+        </div>
+    </div>
+    <div class="col-md-12 mt-4">
+        <h4>Productos en el Carrito:</h4>
+        <table id="listaCarrito" class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán los productos agregados -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="text-end"><strong>Total:</strong></td>
+                    <td id="totalCarrito">$0.00</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="carrito.js"></script>
+</body>
+</html>

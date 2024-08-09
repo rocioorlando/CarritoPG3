@@ -1,0 +1,16 @@
+/* Ajustar el espaciado y el borde de las celdas en la tabla de productos en el carrito */
+#listaCarrito td, #listaCarrito th {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+/* Estilo para el botón de eliminar en la tabla */
+#listaCarrito .btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Estilo para la fila del total */
+#listaCarrito tfoot {
+    font-weight: bold;
+}
