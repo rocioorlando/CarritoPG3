@@ -145,6 +145,7 @@ function actualizarListaCarrito() {
     totalCarritoElement.textContent = `$${totalCarrito.toFixed(2)}`;
 }
 
+
 function limpiarCampos() {
     document.getElementById('codigo').value = '';
     document.getElementById('nombre').value = '';
